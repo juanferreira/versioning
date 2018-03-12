@@ -1,0 +1,19 @@
+{
+  "name": "versioning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "release:version": "node ./changelog --version $VERSION && git push origin && git push origin --follow-tags",
+    "release:patch": "npm version patch && git push --follow-tags",
+    "release:minor": "npm version minor && git push --follow-tags",
+    "release:major": "npm version major && git push --follow-tags"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "generate-changelog": "^1.7.0",
+    "idx": "^2.2.0",
+    "simple-git": "^1.92.0"
+  }
+}
